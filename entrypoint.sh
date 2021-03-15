@@ -12,6 +12,10 @@ ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
 git config --global user.name "$INPUT_USER_NAME"
 git config --global user.email "$INPUT_USER_EMAIL"
 
+# install pandoc 
+wget https://github.com/jgm/pandoc/releases/download/2.12/pandoc-2.12-1-amd64.deb
+sudo dpkg -i pandoc-2.10.1-1-amd64.deb
+
 # install hexo env
 npm install hexo-cli -g
 npm install hexo-deployer-git --save
@@ -32,4 +36,4 @@ else
     hexo g -d -m "$INPUT_COMMIT_MSG"
 fi
 
-echo ::set-output name=notify::"Deploy complate."
+echo ::set-output name=notify::"Deploy complete."
