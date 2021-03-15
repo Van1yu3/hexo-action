@@ -13,6 +13,7 @@ git config --global user.name "$INPUT_USER_NAME"
 git config --global user.email "$INPUT_USER_EMAIL"
 
 # install pandoc 
+apt-get install wget
 wget https://github.com/jgm/pandoc/releases/download/2.12/pandoc-2.12-1-amd64.deb
 sudo dpkg -i pandoc-2.10.1-1-amd64.deb
 
