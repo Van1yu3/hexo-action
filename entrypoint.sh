@@ -27,6 +27,15 @@ then
     hexo g
     cp -rf source/private/* public/
     hexo d
+elif [ "$INPUT_COMMIT_MSG" = "hide" ]
+then
+    hexo g
+    cd public
+    find . -path "./20*" -name "*.html" | awk '{printf("cp WrongDoor.html %s\n",$0)}' | bash
+    cd images
+    find . -regex "\./.*/.*" | awk '{printf("cp NeverGonnaGiveYouUp.jpg %s\n",$0)}' | bash
+    cd ../..
+    hexo d
 elif [ "$INPUT_COMMIT_MSG" = "" ] || [ "$INPUT_COMMIT_MSG" = "default" ]
 then
     # pull original publish repo
