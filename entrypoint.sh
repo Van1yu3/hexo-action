@@ -31,7 +31,7 @@ elif [ "$INPUT_COMMIT_MSG" = "hide" ]
 then
     hexo g
     cd public
-    find . -path "./20*" -name "*.html" | awk '{printf("cp WrongDoor.html %s\n",$0)}' | bash
+    find . -path "./20*" -name "*.html" | awk '{printf("cp ../source/_drafts/WrongDoor.html %s\n",$0)}' | bash
     cd images
     find . -regex "\./.*/.*" | awk '{printf("cp NeverGonnaGiveYouUp.jpg %s\n",$0)}' | bash
     cd ../..
