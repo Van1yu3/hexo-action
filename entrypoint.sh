@@ -25,7 +25,7 @@ npm install hexo-deployer-git --save
 if [ "$INPUT_COMMIT_MSG" = "none" ]
 then
     hexo g
-    cp -rf source/private/* public/
+    cp -rf source/_drafts/private/* public/
     hexo d
 elif [ "$INPUT_COMMIT_MSG" = "hide" ]
 then
