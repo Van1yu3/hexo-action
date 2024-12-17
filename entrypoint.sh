@@ -21,6 +21,7 @@ dpkg -i pandoc-2.12-1-amd64.deb
 # follow https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
 mkdir -p ~/.npm-global/lib
 npm config set prefix '~/.npm-global'
+npm install npm --global
 export PATH=~/.npm-global/bin:$PATH
 NPM_CONFIG_PREFIX=~/.npm-global
 
