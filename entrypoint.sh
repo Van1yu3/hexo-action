@@ -18,6 +18,10 @@ wget https://github.com/jgm/pandoc/releases/download/2.12/pandoc-2.12-1-amd64.de
 dpkg -i pandoc-2.12-1-amd64.deb
 
 # install hexo env
+# follow https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+mkdir -p ~/.npm-global/lib
+NPM_CONFIG_PREFIX=~/.npm-global
+
 npm install hexo-cli -g
 npm install hexo-deployer-git --save
 
