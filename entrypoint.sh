@@ -20,6 +20,8 @@ dpkg -i pandoc-2.12-1-amd64.deb
 # install hexo env
 # follow https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
 mkdir -p ~/.npm-global/lib
+npm config set prefix '~/.npm-global'
+export PATH=~/.npm-global/bin:$PATH
 NPM_CONFIG_PREFIX=~/.npm-global
 
 npm install hexo-cli -g
