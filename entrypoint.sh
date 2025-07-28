@@ -6,6 +6,7 @@ set -e
 mkdir -p /root/.ssh/
 echo "$INPUT_DEPLOY_KEY" > /root/.ssh/id_rsa
 chmod 600 /root/.ssh/id_rsa
+apt-get install -y git openssh-client
 ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
 
 # setup deploy git account
