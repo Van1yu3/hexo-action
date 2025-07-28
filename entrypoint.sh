@@ -24,7 +24,7 @@ dpkg -i pandoc-2.12-1-amd64.deb
 # npm install npm --global
 # export PATH=~/.npm-global/bin:$PATH
 # NPM_CONFIG_PREFIX=~/.npm-global
-npm config set unsafe-perm true
+# npm config set unsafe-perm true
 
 npm install hexo-cli -g
 npm install hexo-deployer-git --save
