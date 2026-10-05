@@ -9,7 +9,7 @@ COPY entrypoint.sh /entrypoint.sh
 COPY sync_deploy_history.js /sync_deploy_history.js
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git openssh-client ca-certificates && \
+    apt-get install -y --no-install-recommends wget git openssh-client ca-certificates && \
     rm -rf /var/lib/apt/lists/* && \
     chmod +x /entrypoint.sh
 
